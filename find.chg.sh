@@ -7,7 +7,7 @@
 if [ -e chg-tot.dat ]; then
   rm chg-tot.dat
 fi
-for i in `seq 0 26`
+for i in `seq 0 26` ## The number of md-*.log files. 
 do
    awk 'BEGIN{x=0;}{ \
         if($5=="q(opt)" && x==0){x=1;l=NR;} \
