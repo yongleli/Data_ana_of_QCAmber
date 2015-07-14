@@ -7,8 +7,9 @@
 if [ -e chg-tot.dat ]; then
   rm chg-tot.dat
 fi
-for i in `seq 0 26` ## The number of md-*.log files. 
+for i in `seq 0 100` ## The number of md-*.log files. 
 do
+  if [ -e md-$i.log ]; then
    awk 'BEGIN{x=0;}{ \
         if($5=="q(opt)" && x==0){x=1;l=NR;} \
         if($1~/QChem-Amber/ && $2~/will/ && $3~/write/ && $4~/current/ && $5~/snapshot/){for (j=0;j<30;j++){print chg[j];}print " ";} \
@@ -19,4 +20,5 @@ do
    echo $i   $j
    cat chg-$i.dat >> chg-tot.dat
    rm chg-$i.dat
+  fi
 done
