@@ -1,0 +1,13 @@
+trajin GCN5.grand.traj 1 520 1
+center :1-163
+image center familiar
+center :1-178
+image center familiar
+center :1-179
+image center familiar
+#trajout GCN5.R.traj
+rms first mass out rmsd_tot.dat :1-178@C,CA,N time 0.01
+rms first mass out rmsd_GCN5.dat :1-163@C,CA,N time 0.01
+rms first mass out rmsd_H3.dat :164-178@C,CA,N time 0.01 nofit
+rms first mass out rmsd_ACO.dat :179@C=,N=,O=,S=,P= time 0.01 nofit
+atomicfluct out RMSF_backbone_prot.dat :1-163@CA byres
