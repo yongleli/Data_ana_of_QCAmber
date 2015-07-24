@@ -1,4 +1,4 @@
-How to calculate vdW parameters in AMBER
+# How to calculate vdW parameters in AMBER
 
 %FLAG ATOM_TYPE_INDEX
 %FORMAT(1OI8)  (IAC(i), i=1,NATOM)
@@ -25,6 +25,8 @@ How to calculate vdW parameters in AMBER
 %FORMAT(5E16.8)  (CN2(i), i=1,NTYPES*(NTYPES+1)/2)
   CN2  : Lennard Jones r**6 terms for all possible
          atom type interactions.  Indexed like CN1 above.
+
+
 NOTE: the atom numbers in the following arrays that describe bonds, angles, and dihedrals are coordinate array indexes for runtime speed. The true atom number equals the absolute value of the number divided by three, plus one. In the case of the dihedrals, if the fourth atom is negative, this implies that the dihedral is an improper. If the third atom is negative, this implies that the end group interations are to be ignored. End group interactions are ignored, for example, in dihedrals of various ring systems (to prevent double counting of 1-4 interactions) and in multiterm dihedrals.
 
 Evdw = A_ij / R_ij^12 - B_ij / R_ij^6
