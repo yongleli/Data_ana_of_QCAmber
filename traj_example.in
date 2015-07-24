@@ -11,3 +11,7 @@ rms first mass out rmsd_GCN5.dat :1-163@C,CA,N time 0.01
 rms first mass out rmsd_H3.dat :164-178@C,CA,N time 0.01 nofit
 rms first mass out rmsd_ACO.dat :179@C=,N=,O=,S=,P= time 0.01 nofit
 atomicfluct out RMSF_backbone_prot.dat :1-163@CA byres
+distance d_NZC :171@NZ :179@C22 out d_NZC.dat
+hbond H1 series donormask :171@NZ acceptormask :WAT dist 3.5 out nhb.a.dat avgout avghb.a.dat bridgeout bridgehb.a.out angle 90.0
+go
+## angle can also be -1, meaning only distances are concerned.
