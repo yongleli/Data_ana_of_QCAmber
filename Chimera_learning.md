@@ -106,7 +106,7 @@ ribscale "all 0.1" #3
 
 setattr a radius 0.8 :79,29,77,37 ## a for atom.
 
-**Polaryti plot:**
+**Polarity plot:**
 
 rangecolor kdHydrophobicity min dodger blue 0 white max orange red
 http://www.cgl.ucsf.edu/chimera/current/docs/UsersGuide/tutorials/surfprop.html
