@@ -1,6 +1,6 @@
 http://vim.wikia.com/wiki/Switching_case_of_characters
 
-## 1. ## 
+## 1. ##
 
 Toggle case "HellO" to "hELLo" with g~ then a movement.
 Uppercase "HellO" to "HELLO" with gU then a movement.
