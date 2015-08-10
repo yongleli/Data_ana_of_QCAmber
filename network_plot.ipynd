@@ -1,0 +1,66 @@
+import networkx as nx
+import numpy as np
+import matplotlib.pyplot as plt
+import pydot
+import itertools
+try:
+    from networkx import graphviz_layout
+except ImportError:
+    raise ImportError("This example needs Graphviz and either PyGraphviz or Pydot")
+mpl.rc('font',family='Times New Roman',size='16')
+
+#G=nx.balanced_tree(3,5)
+#pos=nx.graphviz_layout(G,prog='twopi',args='')
+#H=nx.path_graph(10)
+#G.add_nodes_from(H)
+G=nx.Graph()
+#H=nx.path_graph(10)
+#print "H: ",H
+#b=np.genfromtxt('pt1.txt')
+#Nb=len(b[:,1])
+#c=[]
+#for i in range(Nb):
+#    c.append(float(b[i,0]))
+#    c.append(float(b[i,1]))
+
+#a = np.unique(c).tolist()
+#print a
+#H=[]
+#Na=len(a)
+#print Na
+#for i in range(Na):
+#    H.append(float(a[i]))
+
+#G.add_nodes_from(H)
+print "G: ",G
+
+
+fp = open('pt0.txt', 'Ur')
+EE = []
+for line in fp:
+    EE.append(line.strip().split())
+fp.close()
+##print EE
+G.add_edges_from(EE)
+
+print G.number_of_nodes()
+print G.number_of_edges()
+
+
+pos=nx.graphviz_layout(G,prog='twopi',args='')
+#print pos
+plt.figure(figsize=(8,8))
+
+#nx.draw(G,pos,node_size=40,alpha=0.8,node_color="orange",edgecolors='none',edge_color='blue',with_labels=False)
+nx.draw_networkx_edges(G,pos,nodelist=G.nodes(),edge_color='blue',alpha=0.4)
+nx.draw_networkx_nodes(G,pos,nodelist=G.nodes(),
+                       node_size=80,
+                       node_color='orange')
+
+
+plt.axis('equal')
+plt.axis('off')
+plt.title("Social network of Facebook,\n for 315 random chosen users only")
+plt.savefig('circular_tree.2.png')
+plt.show()
+
