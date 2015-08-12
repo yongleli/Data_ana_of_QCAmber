@@ -112,7 +112,8 @@ rangecolor kdHydrophobicity min dodger blue 0 white max orange red
 http://www.cgl.ucsf.edu/chimera/current/docs/UsersGuide/tutorials/surfprop.html
 http://www.cgl.ucsf.edu/chimera/current/docs/UsersGuide/midas/hydrophob.html
 
-** View point settings **
+**View point settings**
 
 matrixget [ filename ]
+
 matrixset [ filename ]
