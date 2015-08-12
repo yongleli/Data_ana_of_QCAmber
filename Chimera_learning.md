@@ -111,3 +111,8 @@ setattr a radius 0.8 :79,29,77,37 ## a for atom.
 rangecolor kdHydrophobicity min dodger blue 0 white max orange red
 http://www.cgl.ucsf.edu/chimera/current/docs/UsersGuide/tutorials/surfprop.html
 http://www.cgl.ucsf.edu/chimera/current/docs/UsersGuide/midas/hydrophob.html
+
+** View point settings **
+
+matrixget [ filename ]
+matrixset [ filename ]
