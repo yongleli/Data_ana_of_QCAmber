@@ -114,6 +114,5 @@ http://www.cgl.ucsf.edu/chimera/current/docs/UsersGuide/midas/hydrophob.html
 
 **View point settings**
 
-matrixget [ filename ]
-
+matrixget [ filename ]\n
 matrixset [ filename ]
