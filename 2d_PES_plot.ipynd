@@ -1,0 +1,65 @@
+import matplotlib.pyplot as plt
+#from matplotlib.colors import BoundaryNorm
+#from matplotlib.ticker import MaxNLocator
+import numpy as np
+#import time as time
+from scipy.interpolate import griddata
+import scipy.ndimage as ndimage
+import matplotlib as mpl
+import sys
+import fileinput
+
+mpl.rc('font',family='Times New Roman',size='16')
+
+
+fig = plt.figure(1,figsize=(8,8))
+
+##### 100 ns result.
+filename4='2d.6d.dat'
+data4=np.genfromtxt(filename4)
+#inputname2 = "mfp.b.dat"
+#data2 = np.loadtxt(inputname2)
+
+x3=np.linspace(1.9,3.2,200)
+y3=np.linspace(-2.60,2.0,200)
+nx=len(x3)
+ny=len(y3)
+z4=np.zeros((ny,nx))
+
+for i in range(nx):
+    for j in range(ny):
+        z4[j,i]=data4[(i*ny+j),2]
+        
+z5=np.zeros((ny,nx))
+for i in range(nx):
+    for j in range(ny):
+        z5[j,i]=z4[ny-j-1,i]
+
+z6 = ndimage.gaussian_filter(z5, sigma=2.0, order=0)
+quadmesh=plt.imshow(z5)
+quadmesh.set_clim(vmin=0,vmax=32)
+#quadmesh=plt.colorbar(shrink=0.8)
+plt.colorbar(ticks=np.arange(0,32,4),shrink=0.8)
+plt.xticks(np.linspace(0,200,14),np.arange(1.9,3.3,0.1))
+plt.yticks(np.arange(0,200,21.3),np.arange(2.0,-2.6,-0.5))
+pt1=np.arange(0,16,2)
+pt2=np.arange(16,18,0.25)
+pt3=np.arange(18,32,2)
+#levels = np.arange(0, 32, 1)
+#plt.contour(z6,levels,colors='k')
+levels = np.concatenate((pt1,pt2,pt3))
+plt.contour(z6,levels,colors='k')
+
+plt.xlabel("RC 1/$\AA$")
+plt.ylabel("RC 2/$\AA$")
+#quadmesh.set_clim(vmin=0,vmax=140)
+#plt.colorbar(ticks=np.arange(0,140,20))
+#plt.plot(data2[:,0],data2[:,1],color='k',lw=3)
+
+
+
+
+filename = "scheme1_ene.new.png"
+plt.tight_layout()
+
+plt.savefig(filename, dpi = 300)
