@@ -15,3 +15,7 @@ http://pandas.pydata.org
 **Nice examples:**
 
 http://www.randalolson.com/2014/06/28/how-to-make-beautiful-data-visualizations-in-python-with-matplotlib/
+
+**Better color schemes:**
+
+http://tableaufriction.blogspot.ro/2012/11/finally-you-can-use-tableau-data-colors.html
