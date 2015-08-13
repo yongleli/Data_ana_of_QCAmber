@@ -12,3 +12,6 @@ http://statsmodels.sourceforge.net
 Pandas: (contained in Canopy)
 http://pandas.pydata.org
 
+**Nice examples:**
+
+http://www.randalolson.com/2014/06/28/how-to-make-beautiful-data-visualizations-in-python-with-matplotlib/
