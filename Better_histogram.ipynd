@@ -23,7 +23,7 @@ inputname1 = "theta_ACO.bromo.dat"
 data1 = np.genfromtxt(inputname1)
 ndata=len(data1[:,1])
 
-plt.hist(data1[:,1], 72, normed=1, histtype='stepfilled',color= 'b',edgecolor='b',lw=3,fc=tableau20[1])
+plt.hist(data1[:,1], 72, normed=1, histtype='stepfilled',edgecolor=tableau20[0],lw=3,fc=tableau20[1])
 
 plt.axis([-185,185,0.0,0.02])
 plt.xlabel(r'$\theta_{\alpha}$',fontsize = 20)
