@@ -24,3 +24,7 @@ http://tableaufriction.blogspot.ro/2012/11/finally-you-can-use-tableau-data-colo
 
 https://waterprogramming.wordpress.com/2014/09/18/scientific-figures-in-illustrator/
 
+https://pypi.python.org/pypi/brewer2mpl/1.4
+
+https://github.com/jiffyclub/palettable/wiki/brewer2mpl
+
