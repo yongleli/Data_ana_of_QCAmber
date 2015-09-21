@@ -1,6 +1,7 @@
 # Data_ana_of_QCAmber
 Data analysis of raw data from Q-Chem AMBER.
-
+%pylab inline
+%matplotlib inline
 **Recommended packages for matplotlib:**
 
 Seaborn (need to install oneself)
