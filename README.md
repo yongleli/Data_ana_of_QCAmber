@@ -36,3 +36,7 @@ https://github.com/jiffyclub/palettable/wiki/brewer2mpl
 ** Show binding site in PyMol:**
 
 http://hollow.sourceforge.net/binding.html
+
+** Mean residence time and other **
+
+http://mdmix.sourceforge.net/installation/
