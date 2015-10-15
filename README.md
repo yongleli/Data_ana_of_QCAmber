@@ -40,3 +40,7 @@ http://hollow.sourceforge.net/binding.html
 ** Mean residence time and other **
 
 http://mdmix.sourceforge.net/installation/
+
+** A good source for histogram **
+
+http://pandas.pydata.org/pandas-docs/stable/visualization.html
