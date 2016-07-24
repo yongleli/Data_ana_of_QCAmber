@@ -44,3 +44,5 @@ http://mdmix.sourceforge.net/installation/
 ** A good source for histogram **
 
 http://pandas.pydata.org/pandas-docs/stable/visualization.html
+
+https://pyformat.info
